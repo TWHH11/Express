@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var users = require('./../controller/UsersController')
+
 /*const users = [
   {name: "JJ", id : 1},
   {name: "JK", id : 2}
@@ -27,25 +29,23 @@ router.get('/', function(req, res, next) {
   //res.send('respond with a resource');
   next();
 });
-router.get('/', function(req, res, next) {
-  console.log('Second');
-  res.send('<h1>Hello</h1>');
-});
+// router.get('/', function(req, res, next) {
+//   console.log('Second');
+//   res.send('<h1>Hello</h1>');
+// });
 
-router.post('/', function(req, res, next) {
-  console.log('Req', req);
-  res.json({
-    name: "user"
-  });
-});
-// router.get('/ab?cd', function(req, res, next) {
-//   console.log('ab?cd');
-//   res.send('<h1>ab?cd</h1>');
+// router.get('/', function(req, res, next) {
+//   console.log('Req', req);
+//   res.json({
+//     name: "user"
+//   });
 // });
-// router.get('/ab+cd', function(req, res, next) {
-//   console.log('ab+cd');
-//   res.send('<h1>ab+cd</h1>');
+
+// router.get('/',users.getUserById, function(req, res, next) {
+//   console.log('Second');
+
 // });
+
 
 
 

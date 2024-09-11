@@ -1,0 +1,28 @@
+function getAllTodos(req,res,next){
+    return res.json([
+        {
+            id : 1,
+            title: 'Task1'
+        },
+        {
+            id : 2,
+            title: 'Task2'
+        }
+    ])
+}
+
+
+function getonetodo(req,res,next){
+    return res.json([
+        {
+            id : 12,
+            title: '21'
+        },
+       
+    
+    ])
+}
+module.exports = {
+    getAllTodos,
+    getonetodo
+}
