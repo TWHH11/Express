@@ -45,6 +45,29 @@ router.get('/', function(req, res, next) {
 //   console.log('Second');
 
 // });
+router.post('/', function(req, res, next) {
+  console.log('Req', req);
+  res.json({
+    name: "user"
+  });
+});
+
+
+router.get('/redirect', function(req, res, next) {
+  console.log('Redirect Route');
+  res.redirect('/login');
+});
+
+router.get('/file', function(req, res, next) {
+  console.log("getfile");
+  res.download('./public/static/file.txt');
+});
+
+router.get('/ab+cd', function(req, res, next) {
+  console.log('ab+cd');
+  res.send('<h1>ab+cd</h1>');
+});
+
 
 
 
